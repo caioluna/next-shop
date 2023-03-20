@@ -10,7 +10,6 @@ import Head from 'next/head';
 import { stripe } from '@/src/lib/stripe';
 import Stripe from 'stripe';
 
-
 interface ProductProps {
   product: {
     id: string;

@@ -1,4 +1,5 @@
-import { Container, Product } from "../styles/pages/home";
+import { BagButton, Container, Product } from "../styles/pages/home";
+import shoppingBagIcon from '../assets/cart-icon.svg'
 
 import { GetStaticProps } from "next";
 import Image from "next/image";
@@ -40,8 +41,14 @@ export default function Home({ products }: HomeProps) {
               <Image src={product.imageUrl} width={520} height={480} alt='' />
 
               <footer>
-                <strong>{product.name}</strong>
-                <span>{product.price}</span>
+                <div>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </div>
+
+                <BagButton>
+                  <Image src={shoppingBagIcon} alt="shopping bag icon" />
+                </BagButton>
               </footer>
             </Product>
           )

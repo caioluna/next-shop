@@ -47,6 +47,7 @@ export const Product = styled(Link, {
     strong: {
       fontSize: '$lg',
       color: '$gray100',
+      display: 'block',
     },
 
     span: {
@@ -63,3 +64,27 @@ export const Product = styled(Link, {
     },
   },
 });
+
+export const BagButton = styled('button', {
+  position: 'relative',
+
+  width: 48,
+  height: 48,
+  padding: 12,
+
+  border: 'none',
+  borderRadius: 6,
+  backgroundColor: '$green500',
+
+  cursor: 'pointer',
+
+  img: {
+    opacity: 1,
+    width: 24,
+    height: 24,
+  },
+  
+  '&:hover': {
+    backgroundColor: '$green300',
+  }
+})
